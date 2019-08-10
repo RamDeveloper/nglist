@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h3>
+    Hello {{title}}!
+  </h3>
+</div>
+<button (click)="loginWithGoogle()">Login with Google</button>
+<ul>
+  <!-- here the topics wil be object so we are displaying with json-->
+  <li class="text" *ngFor="let topic of topics">
+    {{topic.$value | json}}
+  </li>
+</ul>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+  <a routerLink="/todo">Todo List</a>
+  <a routerLink="/employees">Employees</a>
+</nav>
+<!--<app-heroes></app-heroes> removed due to routes module updates-->
+<router-outlet></router-outlet>
+<app-messages></app-messages>
